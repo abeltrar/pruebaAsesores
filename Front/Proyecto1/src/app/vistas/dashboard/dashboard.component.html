@@ -1,0 +1,62 @@
+
+<app-header></app-header>
+<br>
+
+<div id="global"class="container">
+    <div class="card">
+        <div class="card-body">
+
+    <br>
+    <br>
+    <div class="modal-header">						
+        <h4 class="modal-title">Lista de Asesores</h4>
+        <button type="button" class="btn btn-primary" (click)="nuevoasesor()" >Nuevo asesor</button>
+    </div>
+   
+    <br>
+    <br>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cedula</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Fecha Nacimiento</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Cliente de trabajo</th>
+            <th scope="col">Sede</th>
+            <th scope="col">Usuario Registro</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Fecha Creación</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let asesor of asesores"(click)="editarasesor(asesor.IdAsesor)" >
+            <td>{{ asesor.IdAsesor }}</td>
+            <td>{{ asesor.nombre }}</td>
+            <td>{{ asesor.cedula }}</td>
+            <td>{{ asesor.telefono }}</td>
+            <td>{{ asesor.fechanacimiento }}</td>
+            <td>{{ asesor.genero }}</td>
+            <td>{{ asesor.clientetrabajo }}</td>
+            <td>{{ asesor.sede }}</td>
+            <td>{{ asesor.userregistro }}</td>
+            <td>{{ asesor.edad }}</td>
+            <td>{{ asesor.fechacreacion }}</td>
+
+
+
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+
+
+
+<app-footer></app-footer>

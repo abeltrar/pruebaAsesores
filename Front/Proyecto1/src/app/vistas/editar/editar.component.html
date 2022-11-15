@@ -1,0 +1,66 @@
+<app-header></app-header>
+<br>
+
+        <div id="global" class="container">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+                        <div class="form-group">
+                                <label for="exampleFormControlInput1">Nombre</label>
+                                <input type="text" class="form-control"  placeholder="Nombre del usuario " formControlName="nombre">
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlInput1">Cédula</label>
+                                <input type="number" class="form-control"  placeholder="Ingrese cédula" formControlName="cedula">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <label for="exampleFormControlInput1">Teléfono</label>
+                                    <input type="number" class="form-control"  placeholder="Ingrese teléfono" formControlName="telefono">     
+                                </div>
+                                <div class="col">
+                                    <label for="exampleFormControlInput1">Fecha nacimiento</label>
+                                    <input type="datetime-local" class="form-control"  placeholder="Ingrese fecha" formControlName="fechanacimiento">     
+                                </div>
+                                <label for="exampleFormControlInput1">Género</label>
+                                <select class="form-select" aria-label="Default select example"formControlName="genero">
+                                    <option selected>Seleccione género</option>
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="Masculino">Masculino</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleFormControlInput1">Cliente</label>
+                                <select class="form-select" aria-label="Default select example"formControlName="clientetrabajo">
+                                    <option selected>Seleccione cliente</option>
+                                    <option value="Sura">Sura</option>
+                                    <option value="Nutresa">Nutresa</option>
+                                    <option value="Viva">Viva</option>
+                                </select>
+                                
+                                    <label for="exampleFormControlInput1">Sede</label>
+                                    <select class="form-select" aria-label="Default select example"formControlName="sede">
+                                        <option selected>Seleccione sede</option>
+                                        <option value="Ruta N">Ruta N</option>
+                                        <option value="Puerto Seco">Puerto seco</option>
+                                        <option value="Buro">Buro</option>
+                                    </select>  
+                               
+                             
+                            </div>
+                            <br>
+                            
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            <button type="button" class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+                            <button type="button" class="btn btn-default" (click)="salir()">Salir</button>
+                           
+
+                            
+                </form>
+                </div>
+              </div>
+    </div>
+
+    <br>
+
+<app-footer></app-footer>
